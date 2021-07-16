@@ -179,3 +179,749 @@ INFO: Unsupported notification method: $/setTrace
 [0m2021.07.16 13:48:03 INFO  Attaching to debuggee VM succeeded.[0m
 [0m2021.07.16 13:48:03 INFO  Hello World[0m
 [0m2021.07.16 13:48:04 INFO  Canceling debug proxy for [App][0m
+Jul 16, 2021 1:51:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 196
+Jul 16, 2021 1:52:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 32 is not a valid line number, allowed [0..9]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 32 is not a valid line number, allowed [0..9]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 32 is not a valid line number, allowed [0..9]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:121)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$5(Trees.scala:71)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:70)
+	at scala.meta.internal.metals.codeactions.InsertInferredType.$anonfun$contribute$1(InsertInferredType.scala:70)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Jul 16, 2021 1:52:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 21 is not a valid line number, allowed [0..9]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 21 is not a valid line number, allowed [0..9]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 21 is not a valid line number, allowed [0..9]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:121)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$5(Trees.scala:71)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:70)
+	at scala.meta.internal.metals.codeactions.InsertInferredType.$anonfun$contribute$1(InsertInferredType.scala:70)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Jul 16, 2021 1:52:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 17 is not a valid line number, allowed [0..9]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 17 is not a valid line number, allowed [0..9]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 17 is not a valid line number, allowed [0..9]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:121)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$5(Trees.scala:71)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:70)
+	at scala.meta.internal.metals.codeactions.InsertInferredType.$anonfun$contribute$1(InsertInferredType.scala:70)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Jul 16, 2021 1:52:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 20 is not a valid line number, allowed [0..9]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 20 is not a valid line number, allowed [0..9]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 20 is not a valid line number, allowed [0..9]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:121)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$5(Trees.scala:71)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:70)
+	at scala.meta.internal.metals.codeactions.InsertInferredType.$anonfun$contribute$1(InsertInferredType.scala:70)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Jul 16, 2021 1:52:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 27 is not a valid line number, allowed [0..9]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 27 is not a valid line number, allowed [0..9]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 27 is not a valid line number, allowed [0..9]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:121)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$5(Trees.scala:71)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:70)
+	at scala.meta.internal.metals.codeactions.InsertInferredType.$anonfun$contribute$1(InsertInferredType.scala:70)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Jul 16, 2021 1:52:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 28 is not a valid line number, allowed [0..9]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 28 is not a valid line number, allowed [0..9]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 28 is not a valid line number, allowed [0..9]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:121)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$5(Trees.scala:71)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:70)
+	at scala.meta.internal.metals.codeactions.InsertInferredType.$anonfun$contribute$1(InsertInferredType.scala:70)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Jul 16, 2021 1:52:29 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 28 is not a valid line number, allowed [0..9]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 28 is not a valid line number, allowed [0..9]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 28 is not a valid line number, allowed [0..9]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:121)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$5(Trees.scala:71)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:70)
+	at scala.meta.internal.metals.codeactions.InsertInferredType.$anonfun$contribute$1(InsertInferredType.scala:70)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Jul 16, 2021 1:52:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 28 is not a valid line number, allowed [0..9]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 28 is not a valid line number, allowed [0..9]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 28 is not a valid line number, allowed [0..9]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:121)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$5(Trees.scala:71)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:70)
+	at scala.meta.internal.metals.codeactions.InsertInferredType.$anonfun$contribute$1(InsertInferredType.scala:70)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Jul 16, 2021 1:52:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 28 is not a valid line number, allowed [0..9]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 28 is not a valid line number, allowed [0..9]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 28 is not a valid line number, allowed [0..9]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:121)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$5(Trees.scala:71)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:70)
+	at scala.meta.internal.metals.codeactions.InsertInferredType.$anonfun$contribute$1(InsertInferredType.scala:70)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Jul 16, 2021 1:52:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 32 is not a valid line number, allowed [0..9]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 32 is not a valid line number, allowed [0..9]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 32 is not a valid line number, allowed [0..9]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:121)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$5(Trees.scala:71)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:70)
+	at scala.meta.internal.metals.codeactions.InsertInferredType.$anonfun$contribute$1(InsertInferredType.scala:70)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+[0m2021.07.16 13:52:47 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 13:52:47 INFO  time: compiled revatureproject0 in 0.53s[0m
+[0m2021.07.16 13:53:26 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 13:53:26 INFO  time: compiled revatureproject0 in 0.87s[0m
+[0m2021.07.16 13:54:35 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 13:54:35 INFO  time: compiled revatureproject0 in 0.71s[0m
+[0m2021.07.16 13:57:24 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 13:57:24 INFO  time: compiled revatureproject0 in 0.76s[0m
+[0m2021.07.16 13:57:48 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 13:57:48 INFO  time: compiled revatureproject0 in 0.23s[0m
+Jul 16, 2021 1:58:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 945
+[0m2021.07.16 13:59:25 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:30:5: stale bloop error: '=>' expected but '}' found.
+    }
+    ^[0m
+[0m2021.07.16 13:59:25 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:30:5: stale bloop error: '=>' expected but '}' found.
+    }
+    ^[0m
+[0m2021.07.16 13:59:35 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 13:59:35 INFO  time: compiled revatureproject0 in 0.16s[0m
+[0m2021.07.16 13:59:48 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 13:59:48 INFO  time: compiled revatureproject0 in 0.93s[0m
+[0m2021.07.16 13:59:51 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 13:59:51 INFO  time: compiled revatureproject0 in 0.73s[0m
+[0m2021.07.16 14:00:10 INFO  Listening for transport dt_socket at address: 49687[0m
+[0m2021.07.16 14:00:10 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\dap-server.trace.json[0m
+[0m2021.07.16 14:00:10 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\dap-client.trace.json[0m
+[0m2021.07.16 14:00:11 INFO  Starting debug proxy for [App][0m
+[0m2021.07.16 14:00:10 INFO  Trying to attach to remote debuggee VM kubernetes.docker.internal:49687 .[0m
+[0m2021.07.16 14:00:10 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.07.16 14:00:10 ERROR Exception in thread "main" java.lang.ClassNotFoundException: com.mysql.jdbc.Driver[0m
+[0m2021.07.16 14:00:10 ERROR 	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)[0m
+[0m2021.07.16 14:00:10 ERROR 	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)[0m
+[0m2021.07.16 14:00:10 ERROR 	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)[0m
+[0m2021.07.16 14:00:10 ERROR 	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)[0m
+[0m2021.07.16 14:00:10 ERROR 	at java.lang.Class.forName0(Native Method)[0m
+[0m2021.07.16 14:00:10 ERROR 	at java.lang.Class.forName(Class.java:264)[0m
+[0m2021.07.16 14:00:10 ERROR 	at App$.test_mysql_connection(App.scala:18)[0m
+[0m2021.07.16 14:00:10 ERROR 	at App$.main(App.scala:7)[0m
+[0m2021.07.16 14:00:10 ERROR 	at App.main(App.scala)[0m
+[0m2021.07.16 14:00:11 INFO  Canceling debug proxy for [App][0m
+[0m2021.07.16 14:01:45 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:01:45 INFO  time: compiled revatureproject0 in 0.98s[0m
+[0m2021.07.16 14:01:56 INFO  Listening for transport dt_socket at address: 57163[0m
+[0m2021.07.16 14:01:56 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\dap-server.trace.json[0m
+[0m2021.07.16 14:01:56 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\dap-client.trace.json[0m
+[0m2021.07.16 14:01:56 INFO  Starting debug proxy for [App][0m
+[0m2021.07.16 14:01:56 INFO  Trying to attach to remote debuggee VM kubernetes.docker.internal:57163 .[0m
+[0m2021.07.16 14:01:56 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.07.16 14:01:56 ERROR Exception in thread "main" java.lang.ClassNotFoundException: com.mysql.jdbc.Driver[0m
+[0m2021.07.16 14:01:56 ERROR 	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)[0m
+[0m2021.07.16 14:01:56 ERROR 	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)[0m
+[0m2021.07.16 14:01:56 ERROR 	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)[0m
+[0m2021.07.16 14:01:56 ERROR 	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)[0m
+[0m2021.07.16 14:01:56 ERROR 	at java.lang.Class.forName0(Native Method)[0m
+[0m2021.07.16 14:01:56 ERROR 	at java.lang.Class.forName(Class.java:264)[0m
+[0m2021.07.16 14:01:56 ERROR 	at App$.test_mysql_connection(App.scala:17)[0m
+[0m2021.07.16 14:01:56 ERROR 	at App$.main(App.scala:7)[0m
+[0m2021.07.16 14:01:56 ERROR 	at App.main(App.scala)[0m
+[0m2021.07.16 14:01:56 INFO  Canceling debug proxy for [App][0m
+[0m2021.07.16 14:03:19 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:03:19 INFO  time: compiled revatureproject0 in 0.74s[0m
+[0m2021.07.16 14:03:26 INFO  Listening for transport dt_socket at address: 61227[0m
+[0m2021.07.16 14:03:26 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\dap-server.trace.json[0m
+[0m2021.07.16 14:03:26 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\dap-client.trace.json[0m
+[0m2021.07.16 14:03:26 INFO  Starting debug proxy for [App][0m
+[0m2021.07.16 14:03:26 INFO  Trying to attach to remote debuggee VM kubernetes.docker.internal:61227 .[0m
+[0m2021.07.16 14:03:26 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.07.16 14:03:26 ERROR Exception in thread "main" java.lang.ClassNotFoundException: com.mysql.jdbc.Driver[0m
+[0m2021.07.16 14:03:26 ERROR 	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)[0m
+[0m2021.07.16 14:03:26 ERROR 	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)[0m
+[0m2021.07.16 14:03:26 ERROR 	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)[0m
+[0m2021.07.16 14:03:26 ERROR 	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)[0m
+[0m2021.07.16 14:03:26 ERROR 	at java.lang.Class.forName0(Native Method)[0m
+[0m2021.07.16 14:03:26 ERROR 	at java.lang.Class.forName(Class.java:264)[0m
+[0m2021.07.16 14:03:26 ERROR 	at App$.test_mysql_connection(App.scala:18)[0m
+[0m2021.07.16 14:03:26 ERROR 	at App$.main(App.scala:7)[0m
+[0m2021.07.16 14:03:26 ERROR 	at App.main(App.scala)[0m
+[0m2021.07.16 14:03:26 INFO  Canceling debug proxy for [App][0m
+[0m2021.07.16 14:06:02 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:06:02 INFO  time: compiled revatureproject0 in 0.72s[0m
+[0m2021.07.16 14:07:30 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:07:30 INFO  time: compiled revatureproject0 in 0.92s[0m
+[0m2021.07.16 14:08:10 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:08:10 INFO  time: compiled revatureproject0 in 0.68s[0m
+[0m2021.07.16 14:08:18 INFO  Listening for transport dt_socket at address: 49391[0m
+[0m2021.07.16 14:08:18 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\dap-server.trace.json[0m
+[0m2021.07.16 14:08:18 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\dap-client.trace.json[0m
+[0m2021.07.16 14:08:18 INFO  Starting debug proxy for [App][0m
+[0m2021.07.16 14:08:18 INFO  Trying to attach to remote debuggee VM kubernetes.docker.internal:49391 .[0m
+[0m2021.07.16 14:08:18 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.07.16 14:08:18 ERROR java.lang.ClassNotFoundException: com.mysql.jdbc.Driver[0m
+[0m2021.07.16 14:08:18 ERROR 	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)[0m
+[0m2021.07.16 14:08:18 ERROR 	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)[0m
+[0m2021.07.16 14:08:18 ERROR 	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)[0m
+[0m2021.07.16 14:08:18 ERROR 	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)[0m
+[0m2021.07.16 14:08:18 ERROR 	at java.lang.Class.forName0(Native Method)[0m
+[0m2021.07.16 14:08:18 ERROR 	at java.lang.Class.forName(Class.java:264)[0m
+[0m2021.07.16 14:08:18 ERROR 	at App$.test_mysql_connection(App.scala:19)[0m
+[0m2021.07.16 14:08:18 ERROR 	at App$.main(App.scala:8)[0m
+[0m2021.07.16 14:08:18 ERROR 	at App.main(App.scala)[0m
+[0m2021.07.16 14:08:18 ERROR Exception in thread "main" java.lang.NullPointerException[0m
+[0m2021.07.16 14:08:18 ERROR 	at App$.test_mysql_connection(App.scala:35)[0m
+[0m2021.07.16 14:08:18 ERROR 	at App$.main(App.scala:8)[0m
+[0m2021.07.16 14:08:18 ERROR 	at App.main(App.scala)[0m
+[0m2021.07.16 14:08:18 INFO  Canceling debug proxy for [App][0m
+[0m2021.07.16 14:10:19 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:10:19 INFO  time: compiled revatureproject0 in 0.22s[0m
+[0m2021.07.16 14:10:27 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:10:27 INFO  time: compiled revatureproject0 in 0.69s[0m
+[0m2021.07.16 14:12:35 INFO  Listening for transport dt_socket at address: 56501[0m
+[0m2021.07.16 14:12:35 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\dap-server.trace.json[0m
+[0m2021.07.16 14:12:35 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\dap-client.trace.json[0m
+[0m2021.07.16 14:12:35 INFO  Starting debug proxy for [App][0m
+[0m2021.07.16 14:12:35 INFO  Trying to attach to remote debuggee VM kubernetes.docker.internal:56501 .[0m
+[0m2021.07.16 14:12:35 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.07.16 14:12:35 ERROR java.lang.ClassNotFoundException: com.mysql.jdbc.Driver[0m
+[0m2021.07.16 14:12:35 ERROR 	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)[0m
+[0m2021.07.16 14:12:35 ERROR 	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)[0m
+[0m2021.07.16 14:12:35 ERROR 	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)[0m
+[0m2021.07.16 14:12:35 ERROR 	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)[0m
+[0m2021.07.16 14:12:35 ERROR 	at java.lang.Class.forName0(Native Method)[0m
+[0m2021.07.16 14:12:35 ERROR 	at java.lang.Class.forName(Class.java:264)[0m
+[0m2021.07.16 14:12:35 ERROR 	at App$.test_mysql_connection(App.scala:19)[0m
+[0m2021.07.16 14:12:35 ERROR 	at App$.main(App.scala:8)[0m
+[0m2021.07.16 14:12:35 ERROR 	at App.main(App.scala)[0m
+[0m2021.07.16 14:12:35 INFO  Connection is null[0m
+[0m2021.07.16 14:12:35 INFO  Closing program[0m
+[0m2021.07.16 14:12:35 INFO  Canceling debug proxy for [App][0m
+[0m2021.07.16 14:12:35 ERROR Read data from io exception: java.net.SocketException: socket closed[0m
+Jul 16, 2021 2:14:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1868
+[0m2021.07.16 14:14:57 INFO  running 'C:\Program Files\AdoptOpenJDK\jdk-8.0.292.10-hotspot\bin\java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\jjore\AppData\Local\Temp\metals8863986001456962426\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+[0m2021.07.16 14:14:58 INFO  [info] welcome to sbt 1.5.4 (AdoptOpenJDK Java 1.8.0_292)[0m
+[0m2021.07.16 14:14:58 INFO  [info] loading settings for project revatureproject0-build-build from metals.sbt ...[0m
+[0m2021.07.16 14:15:00 INFO  [info] loading project definition from C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\project\project[0m
+[0m2021.07.16 14:15:00 INFO  [info] loading settings for project revatureproject0-build from metals.sbt ...[0m
+[0m2021.07.16 14:15:00 INFO  [info] loading project definition from C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\project[0m
+[0m2021.07.16 14:15:03 INFO  [success] Generated .bloop\revatureproject0-build.json[0m
+[0m2021.07.16 14:15:03 INFO  [success] Total time: 2 s, completed Jul 16, 2021 2:15:03 PM[0m
+[0m2021.07.16 14:15:04 INFO  [info] loading settings for project revatureproject0 from build.sbt ...[0m
+[0m2021.07.16 14:15:04 INFO  [info] set current project to HelloWorldApp (in build file:/C:/Users/jjore/Files%20&%20Docs/Programming/Revature/Week%202%20-%20MySQL/RevatureProject0/)[0m
+[0m2021.07.16 14:15:10 INFO  [success] Generated .bloop\revatureproject0.json[0m
+[0m2021.07.16 14:15:10 INFO  [success] Generated .bloop\revatureproject0-test.json[0m
+[0m2021.07.16 14:15:10 INFO  [success] Total time: 5 s, completed Jul 16, 2021 2:15:10 PM[0m
+[0m2021.07.16 14:15:10 INFO  sbt bloopInstall exit: 0[0m
+[0m2021.07.16 14:15:10 INFO  time: ran 'sbt bloopInstall' in 12s[0m
+[0m2021.07.16 14:15:10 INFO  Disconnecting from Bloop session...[0m
+[0m2021.07.16 14:15:10 INFO  Shut down connection with build server.[0m
+[0m2021.07.16 14:15:10 INFO  Shut down connection with build server.[0m
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the client stdin, exiting...
+[0m2021.07.16 14:15:10 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol tcp --port 37543'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Loading 2 projects from 'c:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\.bloop'...
+[0m[32m[D][0m Loading project from 'c:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\.bloop\revatureproject0-test.json'
+[0m[32m[D][0m Loading project from 'c:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\.bloop\revatureproject0.json'
+[0m[32m[D][0m Configured SemanticDB in projects 'revatureproject0-test', 'revatureproject0'
+[0m[32m[D][0m Waiting for a connection at 127.0.0.1:37543...
+The server is listening for incoming connections at tcp://127.0.0.1:37543...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.07.16 14:15:10 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\bsp.trace.json[0m
+[0m2021.07.16 14:15:10 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol tcp --port 29391'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at 127.0.0.1:29391...
+The server is listening for incoming connections at tcp://127.0.0.1:29391...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.07.16 14:15:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\bsp.trace.json[0m
+[0m2021.07.16 14:15:11 INFO  time: Connected to build server in 0.65s[0m
+[0m2021.07.16 14:15:11 INFO  Connected to Build server: Bloop v1.4.8-19-4d9f966b[0m
+[0m2021.07.16 14:15:13 INFO  time: indexed workspace in 2.05s[0m
+[0m2021.07.16 14:15:25 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:15:25 INFO  time: compiled revatureproject0 in 0.7s[0m
+Jul 16, 2021 2:16:00 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1888
+[0m2021.07.16 14:16:06 INFO  Listening for transport dt_socket at address: 54231[0m
+[0m2021.07.16 14:16:06 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\dap-server.trace.json[0m
+[0m2021.07.16 14:16:06 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\dap-client.trace.json[0m
+[0m2021.07.16 14:16:07 INFO  Starting debug proxy for [App][0m
+[0m2021.07.16 14:16:06 INFO  Trying to attach to remote debuggee VM kubernetes.docker.internal:54231 .[0m
+[0m2021.07.16 14:16:06 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.07.16 14:16:06 ERROR java.sql.SQLException: java.lang.ClassCastException: java.math.BigInteger cannot be cast to java.lang.Long[0m
+[0m2021.07.16 14:16:06 ERROR 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1078)[0m
+[0m2021.07.16 14:16:06 ERROR 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:989)[0m
+[0m2021.07.16 14:16:06 ERROR 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:975)[0m
+[0m2021.07.16 14:16:06 ERROR 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:920)[0m
+[0m2021.07.16 14:16:06 ERROR 	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:1074)[0m
+[0m2021.07.16 14:16:06 ERROR 	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3590)[0m
+[0m2021.07.16 14:16:06 ERROR 	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2531)[0m
+[0m2021.07.16 14:16:06 ERROR 	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2301)[0m
+[0m2021.07.16 14:16:06 ERROR 	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:834)[0m
+[0m2021.07.16 14:16:06 ERROR 	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)[0m
+[0m2021.07.16 14:16:06 ERROR 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)[0m
+[0m2021.07.16 14:16:06 ERROR 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)[0m
+[0m2021.07.16 14:16:06 ERROR 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)[0m
+[0m2021.07.16 14:16:06 ERROR 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)[0m
+[0m2021.07.16 14:16:06 ERROR 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)[0m
+[0m2021.07.16 14:16:06 ERROR 	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)[0m
+[0m2021.07.16 14:16:06 ERROR 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:317)[0m
+[0m2021.07.16 14:16:06 ERROR 	at java.sql.DriverManager.getConnection(DriverManager.java:664)[0m
+[0m2021.07.16 14:16:06 ERROR 	at java.sql.DriverManager.getConnection(DriverManager.java:270)[0m
+[0m2021.07.16 14:16:06 ERROR 	at App$.test_mysql_connection(App.scala:20)[0m
+[0m2021.07.16 14:16:06 ERROR 	at App$.main(App.scala:8)[0m
+[0m2021.07.16 14:16:06 ERROR 	at App.main(App.scala)[0m
+[0m2021.07.16 14:16:06 ERROR Caused by: java.lang.ClassCastException: java.math.BigInteger cannot be cast to java.lang.Long[0m
+[0m2021.07.16 14:16:06 ERROR 	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:1019)[0m
+[0m2021.07.16 14:16:06 ERROR 	... 17 more[0m
+[0m2021.07.16 14:16:06 INFO  Connection is null[0m
+[0m2021.07.16 14:16:06 INFO  Closing program[0m
+[0m2021.07.16 14:16:07 INFO  Canceling debug proxy for [App][0m
+Jul 16, 2021 2:17:25 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1897
+[0m2021.07.16 14:17:36 INFO  running 'C:\Program Files\AdoptOpenJDK\jdk-8.0.292.10-hotspot\bin\java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\jjore\AppData\Local\Temp\metals6565682925186082871\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+[0m2021.07.16 14:17:37 INFO  [info] welcome to sbt 1.5.4 (AdoptOpenJDK Java 1.8.0_292)[0m
+[0m2021.07.16 14:17:37 INFO  [info] loading settings for project revatureproject0-build-build from metals.sbt ...[0m
+[0m2021.07.16 14:17:39 INFO  [info] loading project definition from C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\project\project[0m
+[0m2021.07.16 14:17:39 INFO  [info] loading settings for project revatureproject0-build from metals.sbt ...[0m
+[0m2021.07.16 14:17:39 INFO  [info] loading project definition from C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\project[0m
+[0m2021.07.16 14:17:41 INFO  [success] Generated .bloop\revatureproject0-build.json[0m
+[0m2021.07.16 14:17:41 INFO  [success] Total time: 2 s, completed Jul 16, 2021 2:17:41 PM[0m
+[0m2021.07.16 14:17:43 INFO  [info] loading settings for project revatureproject0 from build.sbt ...[0m
+[0m2021.07.16 14:17:43 INFO  [info] set current project to HelloWorldApp (in build file:/C:/Users/jjore/Files%20&%20Docs/Programming/Revature/Week%202%20-%20MySQL/RevatureProject0/)[0m
+[0m2021.07.16 14:17:48 INFO  [success] Generated .bloop\revatureproject0.json[0m
+[0m2021.07.16 14:17:48 INFO  [success] Generated .bloop\revatureproject0-test.json[0m
+[0m2021.07.16 14:17:48 INFO  [success] Total time: 5 s, completed Jul 16, 2021 2:17:48 PM[0m
+[0m2021.07.16 14:17:48 INFO  sbt bloopInstall exit: 0[0m
+[0m2021.07.16 14:17:49 INFO  time: ran 'sbt bloopInstall' in 12s[0m
+[0m2021.07.16 14:17:49 INFO  Disconnecting from Bloop session...[0m
+[0m2021.07.16 14:17:49 INFO  Shut down connection with build server.[0m
+[0m2021.07.16 14:17:49 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0m2021.07.16 14:17:49 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol tcp --port 43412'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Loading 2 projects from 'c:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\.bloop'...
+[0m[32m[D][0m Loading project from 'c:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\.bloop\revatureproject0-test.json'
+[0m[32m[D][0m Loading project from 'c:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\.bloop\revatureproject0.json'
+[0m[32m[D][0m Configured SemanticDB in projects 'revatureproject0-test', 'revatureproject0'
+[0m[32m[D][0m Waiting for a connection at 127.0.0.1:43412...
+The server is listening for incoming connections at tcp://127.0.0.1:43412...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.07.16 14:17:49 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\bsp.trace.json[0m
+[0m2021.07.16 14:17:49 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol tcp --port 41090'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at 127.0.0.1:41090...
+The server is listening for incoming connections at tcp://127.0.0.1:41090...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.07.16 14:17:49 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\bsp.trace.json[0m
+[0m2021.07.16 14:17:49 INFO  time: Connected to build server in 0.62s[0m
+[0m2021.07.16 14:17:49 INFO  Connected to Build server: Bloop v1.4.8-19-4d9f966b[0m
+[0m2021.07.16 14:17:51 INFO  time: indexed workspace in 1.85s[0m
+[0m2021.07.16 14:17:51 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:17:51 INFO  time: compiled revatureproject0 in 0.93s[0m
+Jul 16, 2021 2:17:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1937
+[0m2021.07.16 14:18:01 INFO  Listening for transport dt_socket at address: 55573[0m
+[0m2021.07.16 14:18:01 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\dap-server.trace.json[0m
+[0m2021.07.16 14:18:01 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\dap-client.trace.json[0m
+[0m2021.07.16 14:18:01 INFO  Starting debug proxy for [App][0m
+[0m2021.07.16 14:18:01 INFO  Trying to attach to remote debuggee VM kubernetes.docker.internal:55573 .[0m
+[0m2021.07.16 14:18:01 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.07.16 14:18:01 ERROR Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.[0m
+[0m2021.07.16 14:18:02 ERROR java.sql.SQLSyntaxErrorException: Table 'demodatabase.user' doesn't exist[0m
+[0m2021.07.16 14:18:02 ERROR 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)[0m
+[0m2021.07.16 14:18:02 ERROR 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)[0m
+[0m2021.07.16 14:18:02 ERROR 	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1198)[0m
+[0m2021.07.16 14:18:02 ERROR 	at App$.test_mysql_connection(App.scala:24)[0m
+[0m2021.07.16 14:18:02 ERROR 	at App$.main(App.scala:8)[0m
+[0m2021.07.16 14:18:02 ERROR 	at App.main(App.scala)[0m
+[0m2021.07.16 14:18:02 INFO  Closing program[0m
+[0m2021.07.16 14:18:01 INFO  Canceling debug proxy for [App][0m
+[0m2021.07.16 14:18:31 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:18:31 INFO  time: compiled revatureproject0 in 0.74s[0m
+[0m2021.07.16 14:18:36 INFO  Listening for transport dt_socket at address: 55625[0m
+[0m2021.07.16 14:18:36 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\dap-server.trace.json[0m
+[0m2021.07.16 14:18:36 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\dap-client.trace.json[0m
+[0m2021.07.16 14:18:37 INFO  Starting debug proxy for [App][0m
+[0m2021.07.16 14:18:36 INFO  Trying to attach to remote debuggee VM kubernetes.docker.internal:55625 .[0m
+[0m2021.07.16 14:18:36 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.07.16 14:18:37 ERROR java.sql.SQLSyntaxErrorException: Table 'demodatabase.user' doesn't exist[0m
+[0m2021.07.16 14:18:37 ERROR 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)[0m
+[0m2021.07.16 14:18:37 ERROR 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)[0m
+[0m2021.07.16 14:18:37 ERROR 	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1198)[0m
+[0m2021.07.16 14:18:37 ERROR 	at App$.test_mysql_connection(App.scala:24)[0m
+[0m2021.07.16 14:18:37 ERROR 	at App$.main(App.scala:8)[0m
+[0m2021.07.16 14:18:37 ERROR 	at App.main(App.scala)[0m
+[0m2021.07.16 14:18:37 INFO  Closing program[0m
+[0m2021.07.16 14:18:37 INFO  Canceling debug proxy for [App][0m
+Jul 16, 2021 2:19:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1973
+Jul 16, 2021 2:20:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2015
+[0m2021.07.16 14:26:16 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:26:16 INFO  time: compiled revatureproject0 in 0.76s[0m
+[0m2021.07.16 14:26:26 INFO  Listening for transport dt_socket at address: 55114[0m
+[0m2021.07.16 14:26:26 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\dap-server.trace.json[0m
+[0m2021.07.16 14:26:26 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\dap-client.trace.json[0m
+[0m2021.07.16 14:26:26 INFO  Starting debug proxy for [App][0m
+[0m2021.07.16 14:26:26 INFO  Trying to attach to remote debuggee VM kubernetes.docker.internal:55114 .[0m
+[0m2021.07.16 14:26:26 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.07.16 14:26:27 INFO  Connection status = Successful[0m
+[0m2021.07.16 14:26:27 INFO  Closing program[0m
+[0m2021.07.16 14:26:26 INFO  Canceling debug proxy for [App][0m
+[0m2021.07.16 14:27:20 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:27:20 INFO  time: compiled revatureproject0 in 0.69s[0m
+Jul 16, 2021 2:29:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2232
+[0m2021.07.16 14:32:55 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:32:55 INFO  time: compiled revatureproject0 in 0.73s[0m
+[0m2021.07.16 14:33:05 INFO  Listening for transport dt_socket at address: 64710[0m
+[0m2021.07.16 14:33:05 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\dap-server.trace.json[0m
+[0m2021.07.16 14:33:05 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\dap-client.trace.json[0m
+[0m2021.07.16 14:33:05 INFO  Starting debug proxy for [App][0m
+[0m2021.07.16 14:33:05 INFO  Trying to attach to remote debuggee VM kubernetes.docker.internal:64710 .[0m
+[0m2021.07.16 14:33:05 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.07.16 14:33:06 INFO  Connection status = Successful[0m
+[0m2021.07.16 14:33:06 INFO  Closing program[0m
+[0m2021.07.16 14:33:05 INFO  Canceling debug proxy for [App][0m
+[0m2021.07.16 14:35:14 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:35:15 INFO  time: compiled revatureproject0 in 1.01s[0m
+[0m2021.07.16 14:36:50 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:36:50 INFO  time: compiled revatureproject0 in 0.75s[0m
+[0m2021.07.16 14:40:34 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:40:34 INFO  time: compiled revatureproject0 in 0.28s[0m
+[0m2021.07.16 14:41:53 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:33:7: stale bloop error: type mismatch;
+ found   : Unit
+ required: Int
+> while ( resultSet.next() ) {
+>         val status = resultSet.getString("response")
+>         print(Console.GREEN)
+>         print("Connection status = " + status)
+>         print(Console.RESET + "\n")
+>       }[0m
+[0m2021.07.16 14:41:53 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:40:41: stale bloop error: type mismatch;
+ found   : Unit
+ required: Int
+      case a: ClassNotFoundException => a.printStackTrace()
+                                        ^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 14:41:53 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:41:31: stale bloop error: type mismatch;
+ found   : Unit
+ required: Int
+      case b: SQLException => b.printStackTrace()
+                              ^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 14:41:53 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:42:38: stale bloop error: type mismatch;
+ found   : Unit
+ required: Int
+      case c: SQLTimeoutException => c.printStackTrace()
+                                     ^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 14:41:53 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:33:7: stale bloop error: type mismatch;
+ found   : Unit
+ required: Int
+> while ( resultSet.next() ) {
+>         val status = resultSet.getString("response")
+>         print(Console.GREEN)
+>         print("Connection status = " + status)
+>         print(Console.RESET + "\n")
+>       }[0m
+[0m2021.07.16 14:41:53 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:40:41: stale bloop error: type mismatch;
+ found   : Unit
+ required: Int
+      case a: ClassNotFoundException => a.printStackTrace()
+                                        ^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 14:41:53 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:41:31: stale bloop error: type mismatch;
+ found   : Unit
+ required: Int
+      case b: SQLException => b.printStackTrace()
+                              ^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 14:41:53 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:42:38: stale bloop error: type mismatch;
+ found   : Unit
+ required: Int
+      case c: SQLTimeoutException => c.printStackTrace()
+                                     ^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 14:43:10 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:43:10 INFO  time: compiled revatureproject0 in 0.25s[0m
+[0m2021.07.16 14:47:40 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:47:40 INFO  time: compiled revatureproject0 in 0.23s[0m
+[0m2021.07.16 14:48:36 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:48:36 INFO  time: compiled revatureproject0 in 0.76s[0m
+[0m2021.07.16 14:53:05 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:53:05 INFO  time: compiled revatureproject0 in 0.33s[0m
+[0m2021.07.16 14:53:20 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:53:20 INFO  time: compiled revatureproject0 in 0.98s[0m
+[0m2021.07.16 14:53:51 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:53:51 INFO  time: compiled revatureproject0 in 0.77s[0m
+[0m2021.07.16 14:54:29 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:54:29 INFO  time: compiled revatureproject0 in 0.67s[0m
+Jul 16, 2021 2:54:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4129
+[0m2021.07.16 14:54:54 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:54:54 INFO  time: compiled revatureproject0 in 0.69s[0m
+[0m2021.07.16 14:54:57 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 14:54:57 INFO  time: compiled revatureproject0 in 0.8s[0m
