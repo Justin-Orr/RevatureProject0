@@ -1,13 +1,4 @@
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:27:17: a pure expression does nothing in statement position; you may be omitting necessary parentheses[0m
-[0m[[0m[33mwarn[0m] [0m[0m        Console.GREEN[0m
-[0m[[0m[33mwarn[0m] [0m[0m                ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:39:17: a pure expression does nothing in statement position; you may be omitting necessary parentheses[0m
-[0m[[0m[33mwarn[0m] [0m[0m        Console.RED[0m
-[0m[[0m[33mwarn[0m] [0m[0m                ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:43:15: a pure expression does nothing in statement position; you may be omitting necessary parentheses[0m
-[0m[[0m[33mwarn[0m] [0m[0m      Console.BLUE[0m
-[0m[[0m[33mwarn[0m] [0m[0m              ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:45:15: a pure expression does nothing in statement position; you may be omitting necessary parentheses[0m
-[0m[[0m[33mwarn[0m] [0m[0m      Console.RESET[0m
-[0m[[0m[33mwarn[0m] [0m[0m              ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mfour warnings found[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:85:48: comparing values of types Unit and Null using `!=' will always yield true[0m
+[0m[[0m[33mwarn[0m] [0m[0m      while((lineText = lineReader.readLine()) != null) {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                               ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

@@ -925,3 +925,337 @@ WARNING: Unmatched cancel notification for request id 4129
 [0m2021.07.16 14:54:54 INFO  time: compiled revatureproject0 in 0.69s[0m
 [0m2021.07.16 14:54:57 INFO  compiling revatureproject0 (1 scala source)[0m
 [0m2021.07.16 14:54:57 INFO  time: compiled revatureproject0 in 0.8s[0m
+something's wrong: no file:///C:/Users/jjore/Files%20&%20Docs/Programming/Revature/Week%202%20-%20MySQL/RevatureProject0/src/main/scala/App.scala in Array[String]RangePosition(file:///C:/Users/jjore/Files%20&%20Docs/Programming/Revature/Week%202%20-%20MySQL/RevatureProject0/src/main/scala/App.scala, 199, 199, 212)
+[0m2021.07.16 15:24:59 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 15:24:59 INFO  time: compiled revatureproject0 in 0.69s[0m
+Jul 16, 2021 3:29:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 72 is not a valid line number, allowed [0..71]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 72 is not a valid line number, allowed [0..71]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 72 is not a valid line number, allowed [0..71]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.lineLength$1(Position.scala:57)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:60)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:121)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$5(Trees.scala:71)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:70)
+	at scala.meta.internal.metals.codeactions.InsertInferredType.$anonfun$contribute$1(InsertInferredType.scala:70)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+[0m2021.07.16 15:31:44 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 15:31:44 INFO  time: compiled revatureproject0 in 0.23s[0m
+[0m2021.07.16 15:36:45 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 15:36:45 INFO  time: compiled revatureproject0 in 0.73s[0m
+[0m2021.07.16 16:05:38 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 16:05:38 INFO  time: compiled revatureproject0 in 0.77s[0m
+[0m2021.07.16 16:41:26 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 16:41:26 INFO  time: compiled revatureproject0 in 0.23s[0m
+[0m2021.07.16 16:41:40 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 16:41:40 INFO  time: compiled revatureproject0 in 0.71s[0m
+[0m2021.07.16 16:44:49 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 16:44:49 INFO  time: compiled revatureproject0 in 0.24s[0m
+[0m2021.07.16 16:45:19 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 16:45:19 INFO  time: compiled revatureproject0 in 0.8s[0m
+[0m2021.07.16 17:42:59 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 17:42:59 INFO  time: compiled revatureproject0 in 0.23s[0m
+[0m2021.07.16 17:43:03 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 17:43:03 INFO  time: compiled revatureproject0 in 0.19s[0m
+[0m2021.07.16 17:43:37 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 17:43:37 INFO  time: compiled revatureproject0 in 0.16s[0m
+[0m2021.07.16 17:43:39 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 17:43:39 INFO  time: compiled revatureproject0 in 0.16s[0m
+[0m2021.07.16 17:44:24 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 17:44:24 INFO  time: compiled revatureproject0 in 0.29s[0m
+[0m2021.07.16 17:48:56 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 17:48:56 INFO  time: compiled revatureproject0 in 0.23s[0m
+[0m2021.07.16 17:49:40 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 17:49:40 INFO  time: compiled revatureproject0 in 0.25s[0m
+[0m2021.07.16 17:49:47 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 17:49:47 INFO  time: compiled revatureproject0 in 0.23s[0m
+[0m2021.07.16 17:50:11 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 17:50:11 INFO  time: compiled revatureproject0 in 0.75s[0m
+[0m2021.07.16 17:54:16 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 17:54:16 INFO  time: compiled revatureproject0 in 0.8s[0m
+[0m2021.07.16 17:57:20 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 17:57:20 INFO  time: compiled revatureproject0 in 0.23s[0m
+[0m2021.07.16 17:57:27 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 17:57:27 INFO  time: compiled revatureproject0 in 0.75s[0m
+[0m2021.07.16 18:02:25 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 18:02:25 INFO  time: compiled revatureproject0 in 0.9s[0m
+[0m2021.07.16 18:08:47 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:08:47 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:30 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:30 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:31 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:31 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:33 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:33 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:33 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:33 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:33 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:34 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:34 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:34 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:41 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:41 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:43 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:43 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:43 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:43 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:43 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:43 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:43 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:43 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:43 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:43 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:46 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:46 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:46 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:46 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:46 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:46 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:46 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:46 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:48 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:10:48 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:11:37 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:11:37 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:12:26 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:12:26 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:12:27 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:12:27 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:81:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:12:41 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 18:12:41 INFO  time: compiled revatureproject0 in 0.24s[0m
+[0m2021.07.16 18:12:50 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 18:12:50 INFO  time: compiled revatureproject0 in 0.81s[0m
+[0m2021.07.16 18:14:30 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 18:14:30 INFO  time: compiled revatureproject0 in 0.79s[0m
+[0m2021.07.16 18:20:43 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 18:20:43 INFO  time: compiled revatureproject0 in 0.23s[0m
+[0m2021.07.16 18:25:43 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 18:25:43 INFO  time: compiled revatureproject0 in 0.23s[0m
+[0m2021.07.16 18:26:00 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 18:26:00 INFO  time: compiled revatureproject0 in 0.83s[0m
+[0m2021.07.16 18:27:49 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 18:27:49 INFO  time: compiled revatureproject0 in 0.93s[0m
+[0m2021.07.16 18:27:52 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:84:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:27:52 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:84:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.16 18:28:04 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.16 18:28:04 INFO  time: compiled revatureproject0 in 0.86s[0m
+Jul 17, 2021 12:13:11 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jul 17, 2021 12:13:25 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+[0m2021.07.17 15:48:45 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.17 15:48:46 INFO  time: compiled revatureproject0 in 1.67s[0m
+[0m2021.07.17 15:49:06 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.17 15:49:08 INFO  time: compiled revatureproject0 in 2.15s[0m
+[0m2021.07.17 16:22:17 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:84:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.17 16:22:17 INFO  C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:84:13: stale bloop warning: comparing values of types Unit and Null using `!=' will always yield true
+      while((lineText = lineReader.readLine()) != null) {
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m2021.07.17 16:22:55 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.17 16:22:56 INFO  time: compiled revatureproject0 in 1.2s[0m
+[0m2021.07.17 16:23:57 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.17 16:23:58 INFO  time: compiled revatureproject0 in 1.12s[0m
+[0m2021.07.17 16:24:28 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.17 16:24:28 INFO  time: compiled revatureproject0 in 0.88s[0m
+[0m2021.07.17 16:26:32 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.17 16:26:32 INFO  time: compiled revatureproject0 in 0.24s[0m
+[0m2021.07.17 16:27:33 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.17 16:27:33 INFO  time: compiled revatureproject0 in 0.43s[0m
+[0m2021.07.17 16:27:37 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.17 16:27:38 INFO  time: compiled revatureproject0 in 1.22s[0m
+[0m2021.07.17 16:31:19 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.17 16:31:20 INFO  time: compiled revatureproject0 in 1.01s[0m
+[0m2021.07.17 16:32:35 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.17 16:32:35 INFO  time: compiled revatureproject0 in 0.83s[0m
+[0m2021.07.17 16:35:14 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.17 16:35:14 INFO  time: compiled revatureproject0 in 0.76s[0m
+[0m2021.07.17 16:35:48 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.17 16:35:48 INFO  time: compiled revatureproject0 in 0.81s[0m
+[0m2021.07.17 16:38:19 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.17 16:38:19 INFO  time: compiled revatureproject0 in 0.78s[0m
+[0m2021.07.17 16:40:06 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.17 16:40:06 INFO  time: compiled revatureproject0 in 0.88s[0m
+[0m2021.07.17 16:40:47 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.17 16:40:47 INFO  time: compiled revatureproject0 in 0.97s[0m
+[0m2021.07.17 16:42:04 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.17 16:42:04 INFO  time: compiled revatureproject0 in 0.81s[0m
+[0m2021.07.17 16:42:26 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.17 16:42:26 INFO  time: compiled revatureproject0 in 0.89s[0m
+[0m2021.07.17 16:43:12 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.17 16:43:12 INFO  time: compiled revatureproject0 in 0.92s[0m
+[0m2021.07.17 19:28:53 INFO  shutting down Metals[0m
+[0m2021.07.17 19:28:53 INFO  Shut down connection with build server.[0m
+[0m2021.07.17 19:28:53 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0m2021.07.19 10:32:07 INFO  Started: Metals version 0.10.5 in workspace 'C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0' for client Visual Studio Code 1.58.2.[0m
+[0m2021.07.19 10:32:07 INFO  time: initialize in 0.35s[0m
+[0m2021.07.19 10:32:07 INFO  Attempting to connect to the build server...[0m
+[0m2021.07.19 10:32:07 WARN  no build target for: C:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala[0m
+[0m2021.07.19 10:32:07 INFO  skipping build import with status 'Installed'[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol tcp --port 26084'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at 127.0.0.1:26084...
+The server is listening for incoming connections at tcp://127.0.0.1:26084...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.07.19 10:32:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\bsp.trace.json[0m
+[0m2021.07.19 10:32:09 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol tcp --port 42315'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at 127.0.0.1:42315...
+The server is listening for incoming connections at tcp://127.0.0.1:42315...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.07.19 10:32:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\jjore\AppData\Local\scalameta\metals\cache\bsp.trace.json[0m
+[0m2021.07.19 10:32:09 INFO  time: Connected to build server in 1.36s[0m
+[0m2021.07.19 10:32:09 INFO  Connected to Build server: Bloop v1.4.8-19-4d9f966b[0m
+[0m2021.07.19 10:32:10 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+[0m2021.07.19 10:32:11 INFO  time: Imported build in 0.21s[0m
+[0m2021.07.19 10:32:11 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+[0m2021.07.19 10:32:13 INFO  time: code lens generation in 4.95s[0m
+[0m2021.07.19 10:32:16 INFO  time: indexed workspace in 5.05s[0m
+[0m2021.07.19 10:40:37 INFO  Found new symbol references for '', try running again.[0m
+Jul 19, 2021 10:40:57 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 111
+Jul 19, 2021 10:41:19 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 165
+[0m2021.07.19 10:41:25 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.19 10:41:27 INFO  time: compiled revatureproject0 in 1.5s[0m
+Exception in thread "pool-4-thread-1" java.lang.Error: java.lang.InterruptedException
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1155)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess$$anonfun$onCompilerJobQueue$1.apply$mcV$sp(CompilerAccess.scala:195)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	... 2 more
+Jul 19, 2021 10:46:19 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 462
+[0m2021.07.19 10:52:15 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.19 10:52:15 INFO  time: compiled revatureproject0 in 0.43s[0m
+[0m2021.07.19 11:04:13 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.19 11:04:14 INFO  time: compiled revatureproject0 in 1.24s[0m
+[0m2021.07.19 12:18:52 INFO  compiling revatureproject0 (1 scala source)[0m
+[0m2021.07.19 12:18:53 INFO  time: compiled revatureproject0 in 1.25s[0m
