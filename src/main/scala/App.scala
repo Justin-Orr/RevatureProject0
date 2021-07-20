@@ -6,8 +6,12 @@ import java.io.FileReader
 import java.io.BufferedReader
 import java.io.FileNotFoundException
 import java.sql.PreparedStatement
+import scala.io.StdIn
 
 object App {
+
+  val username = "admin"
+  val password = "password"
 
   var connection:Connection = null
 
@@ -22,13 +26,65 @@ object App {
       //Load the data if empty
       //load_books_to_db()
 
+      var finished = false
+
+      cprintln(LibraryPrompter.loginPrompt(), Console.CYAN)
+      do {
+        cprint("username>: ", Console.CYAN)
+        var input1 = StdIn.readLine()
+        cprint("password>: ", Console.CYAN)
+        var input2 = StdIn.readLine()
+        if(input1 == username && password == input2) {
+          finished = true
+        }
+        else {
+          cprintln("Invalid Credentials. Try again.", Console.RED)
+        }
+
+      } while(!finished)
+
+      finished = false
+      cprintln(LibraryPrompter.welcomeMessage(), Console.CYAN)
+      cprintln(LibraryPrompter.help(), Console.CYAN)
+      do {
+        cprint(">: ", Console.CYAN)
+        var input = StdIn.readLine()
+        
+        input match {
+          case "help" => println(LibraryPrompter.help())
+          case "search" => println(LibraryPrompter.searchPrompt()); queryForBooks();
+          case "quit" => finished = true
+          case _ => cprintln("Unexpected command: Type \"help\" to relist possible commands", Console.YELLOW)
+        }
+
+      } while(!finished)
+
       //Close the connection
       connection.close()
     }
-    
-    print(Console.BLUE)
-    print("Closing program")
-    print(Console.RESET + "\n")
+    cprintln("Closing program", Console.BLUE)
+  }
+
+  def queryForBooks(): Unit = {
+    try {
+      val sql = "SELECT * FROM books LIMIT 10"
+
+      // create the statement, and run the select query
+      val statement = connection.createStatement()
+      val resultSet = statement.executeQuery(sql)
+
+      while ( resultSet.next() ) {
+        var title = resultSet.getString("title")
+        var author = resultSet.getString("author")
+        var genre = resultSet.getString("genre")
+        var pages = resultSet.getString("pages")
+        var publisher = resultSet.getString("publisher")
+        println("Title: " + title + " | Author: " + author + " | Genre: " + genre + " | Pages: " + pages + " | Publisher: " + publisher)
+      }
+    }
+    catch {
+      case a: SQLException => try {connection.rollback()} catch {case e: SQLException => e.printStackTrace()}
+    }
   }
 
   def test_mysql_connection(): Int = {
@@ -46,9 +102,7 @@ object App {
 
       while ( resultSet.next() ) {
         val status = resultSet.getString("response")
-        print(Console.GREEN)
-        print("Database Connection status = " + status)
-        print(Console.RESET + "\n")
+        cprintln("Database Connection status = " + status, Console.GREEN)
       }
 
       //Return a status code of 1 for successful connection
@@ -67,9 +121,7 @@ object App {
   }// End of test_mysql_connection
 
   def print_failure_message(error_message:String): Unit = {
-    print(Console.RED)
-    print(error_message)
-    print(Console.RESET + "\n")
+    cprintln(error_message, Console.RED)
   }// End of print_connection_failure_message
 
   def load_books_to_db(): Unit = {
@@ -124,6 +176,18 @@ object App {
       case b: SQLException => try {connection.rollback()} catch {case e: SQLException => e.printStackTrace()}
     }
 
+  }
+
+  def cprintln(s: String, color:String): Unit = {
+    print(color)
+    print(s)
+    print(Console.RESET + "\n")
+  }
+
+  def cprint(s: String, color:String): Unit = {
+    print(color)
+    print(s)
+    print(Console.RESET)
   }
 
 }// EOF
