@@ -1,4 +1,4 @@
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:85:48: comparing values of types Unit and Null using `!=' will always yield true[0m
-[0m[[0m[33mwarn[0m] [0m[0m      while((lineText = lineReader.readLine()) != null) {[0m
-[0m[[0m[33mwarn[0m] [0m[0m                                               ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\jjore\Files & Docs\Programming\Revature\Week 2 - MySQL\RevatureProject0\src\main\scala\App.scala:112:9: not found: value cprintln[0m
+[0m[[0m[31merror[0m] [0m[0m        cprintln("Database Connection status = " + status, Console.GREEN)[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

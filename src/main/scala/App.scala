@@ -2,10 +2,10 @@ import java.sql.DriverManager
 import java.sql.Connection
 import java.sql.SQLException
 import java.sql.SQLTimeoutException
+import java.sql.PreparedStatement
 import java.io.FileReader
 import java.io.BufferedReader
 import java.io.FileNotFoundException
-import java.sql.PreparedStatement
 import scala.io.StdIn
 
 object App {
@@ -26,35 +26,39 @@ object App {
       //Load the data if empty
       //load_books_to_db()
 
+      //Test connection with a simple query
+      //queryForBooksTest()
+
       var finished = false
 
-      cprintln(LibraryPrompter.loginPrompt(), Console.CYAN)
+      LibraryPrompter.printLoginPrompt()
       do {
-        cprint("username>: ", Console.CYAN)
+        SpecialPrint.cprint("username>: ", Console.CYAN)
         var input1 = StdIn.readLine()
-        cprint("password>: ", Console.CYAN)
+        SpecialPrint.cprint("password>: ", Console.CYAN)
         var input2 = StdIn.readLine()
         if(input1 == username && password == input2) {
           finished = true
         }
         else {
-          cprintln("Invalid Credentials. Try again.", Console.RED)
+          SpecialPrint.cprintln("Invalid Credentials. Try again.", Console.RED)
         }
 
       } while(!finished)
 
       finished = false
-      cprintln(LibraryPrompter.welcomeMessage(), Console.CYAN)
-      cprintln(LibraryPrompter.help(), Console.CYAN)
+
+      LibraryPrompter.printWelcomeMessage()
+      LibraryPrompter.printHelp()
       do {
-        cprint(">: ", Console.CYAN)
+        SpecialPrint.cprint(">: ", Console.CYAN)
         var input = StdIn.readLine()
         
         input match {
-          case "help" => println(LibraryPrompter.help())
-          case "search" => println(LibraryPrompter.searchPrompt()); queryForBooks();
+          case "help" => LibraryPrompter.printHelp()
+          case "search" => searchMenu();
           case "quit" => finished = true
-          case _ => cprintln("Unexpected command: Type \"help\" to relist possible commands", Console.YELLOW)
+          case _ => SpecialPrint.cprintln("Unexpected command: Type \"help\" to relist possible commands", Console.YELLOW)
         }
 
       } while(!finished)
@@ -62,10 +66,64 @@ object App {
       //Close the connection
       connection.close()
     }
-    cprintln("Closing program", Console.BLUE)
+    SpecialPrint.cprintln("Closing program", Console.BLUE)
   }
 
-  def queryForBooks(): Unit = {
+  def searchMenu(): Unit = {
+    LibraryPrompter.printSearchMenuPrompt()
+    var finished = false
+    do {
+        SpecialPrint.cprint("search_attribute>: ", Console.MAGENTA)
+        var input = StdIn.readLine()
+        
+        input match {
+          case "title" => queryDB("title")
+          case "author" => queryDB("author")
+          case "genre" => queryDB("genre")
+          case "publisher" => queryDB("publisher")
+          case "help" => LibraryPrompter.printSearchMenuHelp()
+          case "back" => finished = true
+          case _ => SpecialPrint.cprintln("Unexpected command: Type \"help\" to relist possible commands", Console.YELLOW)
+        }
+
+      } while(!finished)
+
+  }
+
+  def queryDB(attr:String): Unit = {
+    SpecialPrint.cprint(attr + ">: ", Console.MAGENTA)
+    var input = StdIn.readLine()
+
+    try {
+      val sql = "SELECT * FROM books WHERE " + attr + " LIKE \"%" + input + "%\""
+
+      // create the statement, and run the select query
+      val statement = connection.createStatement()
+      val resultSet = statement.executeQuery(sql)
+
+      if(resultSet.next() == false) {
+        SpecialPrint.cprintln("No results found.", Console.YELLOW)
+      }
+      else {
+        do {
+          var title = resultSet.getString("title")
+          var author = resultSet.getString("author")
+          var genre = resultSet.getString("genre")
+          var pages = resultSet.getString("pages")
+          var publisher = resultSet.getString("publisher")
+
+          println("Title: " + title + " | Author: " + author + " | Genre: " + genre + " | Pages: " + pages + " | Publisher: " + publisher)
+        } while ( resultSet.next() )
+      }
+
+    }
+    catch {
+      case a: SQLException => try {connection.rollback()} catch {case e: SQLException => e.printStackTrace()}
+    } 
+
+  }
+
+  def queryForBooksTest(): Unit = {
     try {
       val sql = "SELECT * FROM books LIMIT 10"
 
@@ -95,6 +153,7 @@ object App {
       // make the connection
       Class.forName(driver).newInstance()
       connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/demodatabase?" + "user=root&password=Ro93Jo98@")
+      connection.setAutoCommit(false);
 
       // create the statement, and run the select query
       val statement = connection.createStatement()
@@ -102,7 +161,7 @@ object App {
 
       while ( resultSet.next() ) {
         val status = resultSet.getString("response")
-        cprintln("Database Connection status = " + status, Console.GREEN)
+        SpecialPrint.cprintln("Database Connection status = " + status, Console.GREEN)
       }
 
       //Return a status code of 1 for successful connection
@@ -118,11 +177,11 @@ object App {
       // Scala wants return statement within catch block
     }
     
-  }// End of test_mysql_connection
+  }
 
   def print_failure_message(error_message:String): Unit = {
-    cprintln(error_message, Console.RED)
-  }// End of print_connection_failure_message
+    SpecialPrint.cprintln(error_message, Console.RED)
+  }
 
   def load_books_to_db(): Unit = {
     var lineReader:BufferedReader = null
@@ -176,18 +235,6 @@ object App {
       case b: SQLException => try {connection.rollback()} catch {case e: SQLException => e.printStackTrace()}
     }
 
-  }
-
-  def cprintln(s: String, color:String): Unit = {
-    print(color)
-    print(s)
-    print(Console.RESET + "\n")
-  }
-
-  def cprint(s: String, color:String): Unit = {
-    print(color)
-    print(s)
-    print(Console.RESET)
   }
 
 }// EOF
