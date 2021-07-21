@@ -14,4 +14,4 @@ Scala | v. 2.11.12
 MySQL | v. 8.0.25
 MySQL Workbench | v. 8.0.25
 SBT Build Tool | v. 1.5.4
-Vscode | 1.58.2
+Vscode | v. 1.58.2
