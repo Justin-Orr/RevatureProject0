@@ -1,4 +1,4 @@
-# RevatureProject0
+# Revature Project 0: Rev Library Lookup
 A digital library cli application in scala to practice using scala and connectivity with MySQL using the jdbc java api. The data is a collection of books along with meta data about each book such as title, author, publisher, etc. Python was used for data formatting before insertion into the MySQL database. The application allows the user to query the db for a READ ONLY view of the books and their related information.
 
 ### How to Run
